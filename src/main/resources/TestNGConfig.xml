@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Book Test Suite" >
+    <test name="Tests"   >
+        <packages>
+            <package name="test.service.*" />
+        </packages>
+    </test>
+</suite>

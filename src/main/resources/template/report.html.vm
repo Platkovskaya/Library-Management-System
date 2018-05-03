@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Library Results</title>
+<style type="text/css">
+
+#simple_table{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
+    border-collapse:collapse;
+    margin-top: 20px;
+}
+
+#simple_table td, #simple_table th {
+    font-size:1.0em;
+    border:1px solid #005efe;
+    padding:3px 7px 2px 7px;
+}
+
+#simple_table th {
+    font-size:1.2em;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#90b0dd;
+    color:#fff;
+}
+
+#simple_table tr.alt td {
+    color:#000;
+    background-color:#EAF2D3;
+}
+
+</style>
+</head>
+<body>
+
+<table id="simple_table">
+    <tr>
+         <th colspan="4">BOOKS</th>
+    </tr>
+    <tr>
+         <th>ID</th>
+         <th>TITLE</th>
+         <th>AUTHOR</th>
+         <th>BRIEF</th>
+    </tr>
+     #foreach($book in $books)
+        <tr>
+            <td>$book.getId()</td>
+            <td>$book.getTitle()</td>
+            <td>$book.getAuthor()</td>
+            <td>$book.getBrief()</td>
+        </tr>
+      #end
+</table>
+
+</ br>
+
+<table id="simple_table">
+    <tr>
+         <th colspan="4">EMPLOYEES</th>
+    </tr>
+    <tr>
+         <th>ID</th>
+         <th>NAME</th>
+         <th>EMAIL</th>
+         <th>DATE OF BIRTH</th>
+    </tr>
+     #foreach($employee in $employees)
+        <tr>
+            <td>$employee.getId()</td>
+            <td>$employee.getName()</td>
+            <td>$employee.getEmail()</td>
+            <td>$employee.getDateOfBirth()</td>
+        </tr>
+      #end
+</table>
+
+</ br>
+</ br>
+</ br>
+
+<table id="simple_table">
+    <tr>
+         <th colspan="3">ACCOUNTING</th>
+    </tr>
+    <tr>
+         <th>ID</th>
+         <th>BOOK ID</th>
+         <th>EMPLOYEE ID</th>
+    </tr>
+     #foreach($accounting in $accountings)
+        <tr>
+            <td>$accounting.getId()</td>
+            <td>$accounting.getBookID()</td>
+            <td>$accounting.getEmployeeID()</td>
+        </tr>
+      #end
+</table>
+
+</ br>
+</ br>
+</ br>
+
+<table id="simple_table">
+    <tr>
+         <th colspan="3">ACCOUNTING DATA</th>
+    </tr>
+    <tr>
+         <th>EMPLOYEE</th>
+         <th>BOOKS</th>
+    </tr>
+     #foreach($employee in $takenBooksByEmployees)
+        <tr>
+            <td>$employee.getName()</td>
+            <td>
+                #foreach($book in $employee.getRentedBooks())
+                    <p>$book.getTitle()</p>
+                    </ br>
+                #end
+            </td>
+        </tr>
+      #end
+</table>
+
+</body>
+</html>
