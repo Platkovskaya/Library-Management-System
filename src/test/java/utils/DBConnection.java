@@ -7,9 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-/**
- * Created by Irina on 27.04.2018.
- */
+
 public class DBConnection {
 
     private DBConnection(){}
