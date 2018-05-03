@@ -13,9 +13,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Irina on 27.04.2018.
- */
+
 public class ReadAllDataTest {
 
     private static final String REQUEST = "select * from book";
