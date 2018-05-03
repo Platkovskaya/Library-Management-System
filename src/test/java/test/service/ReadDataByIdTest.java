@@ -11,9 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/**
- * Created by Irina on 27.04.2018.
- */
+
 public class ReadDataByIdTest {
 
     private static final String REQUEST = "select * from book where book_id=6";
