@@ -11,9 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/**
- * Created by Irina on 27.04.2018.
- */
+
 public class AddAndDeleteDataTest {
 
     private static final String REQUEST = "select * from book where title='BookTest' and brief='BriefTest' and author='AuthorTest' and publish_year=0000";
